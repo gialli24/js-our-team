@@ -39,25 +39,31 @@ const teamMembers = [
 ];
 
 /* Store DOM nodes */
-const testContainerEl = document.querySelector(".test-container");
+const containerEl = document.querySelector(".container");
 
 /* Markup variable */
-let list = ""; 
+let cards = ""; 
 
 /* Retrive all member */
 for (const member of teamMembers) {
     
     /* Prepare markup */
-    list += `
-        <li>
-            <img src="assets/${member.img}">
-            <h3>${member.name}</h3>
-            <div>${member.role}</div>
-            <div>${member.email}</div>
-        </li>
+    cards += `
+        <div class="card text-center my-4">
+            <img src="assets/${member.img}" class="card-img" alt="">
+            
+            <div class="card-body">
+                <h3>${member.name}</h3>
+                ${member.email}
+            </div>
+
+            <div class="card-footer">
+                ${member.role}
+            </div>
+        </div>
     `;
 }
 
 
 /* Show cards */
-testContainerEl.innerHTML = list;
+containerEl.innerHTML = cards;
