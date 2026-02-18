@@ -9,16 +9,20 @@
 function renderMarkup(image, name, email, role) {
     const markup = `
         <div class="col">
-            <div class="card text-center my-4">
-                <img src="${image}" class="card-img" alt="">
-                
-                <div class="card-body">
-                    <h3>${name}</h3>
-                    ${email}
-                </div>
-
-                <div class="card-footer">
-                    ${role}
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="${image}" class="rounded">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">${name}</h5>
+                            <p class="card-text">${email}</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-text">${role}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
