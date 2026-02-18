@@ -47,6 +47,8 @@ const emailField = document.getElementById("email");
 const imageField = document.getElementById("image");
 const roleField = document.getElementById("role");
 
+const submitBtn = document.getElementById("submit-btn");
+
 /* Markup variable */
 let cards = ""; 
 
@@ -61,6 +63,24 @@ for (const member of teamMembers) {
     cards += renderMarkup(image, name, email, role); 
 }
 
-
 /* Show cards */
 containerEl.innerHTML = cards;
+
+/* Form handler */
+submitBtn.addEventListener("click", function(e) {
+    /* Prevent default form refresh */
+    e.preventDefault();
+
+    const newMember = createMember();
+
+    if (newMember != "") {
+        /* Retrive data */
+        const {image, name, email, role} = newMember;
+        
+        /* Markup */
+        const markup = renderMarkup(image, name, email, role);
+    
+        /* Show */
+        containerEl.innerHTML += markup;
+    }
+})
