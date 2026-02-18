@@ -41,29 +41,24 @@ const teamMembers = [
 /* Store DOM nodes */
 const containerEl = document.getElementById("team-container");
 
+const firstNameField = document.getElementById("first-name");
+const lastNameField = document.getElementById("last-name");
+const emailField = document.getElementById("email");
+const imageField = document.getElementById("image");
+const roleField = document.getElementById("role");
+
 /* Markup variable */
 let cards = ""; 
 
 /* Retrive all member */
 for (const member of teamMembers) {
     
-    /* Prepare markup */
-    cards += `
-        <div class="col">
-            <div class="card text-center my-4">
-                <img src="assets/${member.img}" class="card-img" alt="">
-                
-                <div class="card-body">
-                    <h3>${member.name}</h3>
-                    ${member.email}
-                </div>
+    /* Store members data */
+    const {name, email, role} = member;
+    const image = `./assets/${member.img}`;
 
-                <div class="card-footer">
-                    ${member.role}
-                </div>
-            </div>
-        </div>
-    `;
+    /* Prepare markup */
+    cards += renderMarkup(image, name, email, role); 
 }
 
 

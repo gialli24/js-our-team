@@ -24,6 +24,45 @@
             </div>
         </section>
         <!-- /.team -->
+
+        <section class="add-member">
+            <div class="container">
+                <h2>Aggiungi un membro</h2>
+
+                <!-- Form -->
+                <form class="row g-3 mt-3">
+
+                    <div class="col-md-6">
+                        <label for="first-name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="first-name" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="last-name" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="last-name" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="image" class="form-label">Immagine</label>
+                        <input type="url" class="form-control" id="image" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="role" class="form-label">Ruolo</label>
+                        <input type="text" class="form-control" id="role" required>
+                    </div>
+                    
+                    <!-- Submit Btn -->
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Sign in</button>
+                </form>
+            </div>
+        </section>
+        <!-- /.add-member -->
     </main>
     <!-- /.app-main -->
     <ul class="test-container"></ul>
@@ -32,6 +71,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
     <!-- JS -->
+    <script src="./functions.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
