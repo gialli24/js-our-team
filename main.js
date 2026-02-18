@@ -39,7 +39,7 @@ const teamMembers = [
 ];
 
 /* Store DOM nodes */
-const containerEl = document.querySelector(".container");
+const containerEl = document.getElementById("team-container");
 
 /* Markup variable */
 let cards = ""; 
@@ -49,16 +49,18 @@ for (const member of teamMembers) {
     
     /* Prepare markup */
     cards += `
-        <div class="card text-center my-4">
-            <img src="assets/${member.img}" class="card-img" alt="">
-            
-            <div class="card-body">
-                <h3>${member.name}</h3>
-                ${member.email}
-            </div>
+        <div class="col">
+            <div class="card text-center my-4">
+                <img src="assets/${member.img}" class="card-img" alt="">
+                
+                <div class="card-body">
+                    <h3>${member.name}</h3>
+                    ${member.email}
+                </div>
 
-            <div class="card-footer">
-                ${member.role}
+                <div class="card-footer">
+                    ${member.role}
+                </div>
             </div>
         </div>
     `;
