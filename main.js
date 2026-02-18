@@ -37,3 +37,11 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+/* Store DOM nodes */
+
+/* Retrive all member */
+
+/* Prepare markup */
+
+/* Show cards */
